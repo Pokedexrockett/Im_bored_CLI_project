@@ -3,9 +3,7 @@
 require "bundler/setup"
 require "im_bored_cli_project_cli"
 
-testing
-
-
+puts testing
 # require './lib/im_bored'
 # require 'suggestion'
 # require 'open-uri'
