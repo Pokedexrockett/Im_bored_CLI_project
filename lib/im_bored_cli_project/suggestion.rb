@@ -6,7 +6,7 @@
 # end
 
 class Suggestion
-    attr_accessor :type, :participants, :price
+    attr_accessor :type, :participants, :price, :activity
     
 
     @@all = []
@@ -14,7 +14,7 @@ class Suggestion
     # def initialize(type:, participants:, price:)
     def initialize(hash)
         hash.each do |k,v|
-            @k = v
+            self.send("#{k}=", v)
         end
         @@all << self
     end

@@ -11,20 +11,22 @@ class Api
     end
 
 
-    def activity_by_total_random(random)
+    def activity_by_total_random(surprise)
         # http://www.boredapi.com/api/activity/
-        req_url="#{@url}#{random}/"
+        req_url="#{@url}#{surprise}/"
         # puts req_url # Test to make sure I still get the right URL
         data = HTTParty.get(req_url) 
         # puts data #Test for endpoint
         suggestion_hash = {
-            type: data["activity"],
-            participants: data["activity"],
-            price: data["activity"]
+            type: data["type"],
+            participants: data["participants"],
+            price: data["price"],
+            activity: data["activity"],
+            # random: data["activity"]
             }
             
-            suggestion = Suggestion.new(suggestion_hash)
-            binding.pry
+        suggestion = Suggestion.new(suggestion_hash)
+        binding.pry
             puts suggestion.type
     end
 
