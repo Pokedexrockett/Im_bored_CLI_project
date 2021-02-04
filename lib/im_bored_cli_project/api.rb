@@ -30,6 +30,7 @@ class Suggestion
 end
 
 
+
 class Api
     attr_accessor :url
     def initialize(url)
