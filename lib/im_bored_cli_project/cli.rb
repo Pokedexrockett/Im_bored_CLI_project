@@ -1,6 +1,16 @@
 #cexecutes it all
 # CLI Controller 
 
+class Cli
+
+    def run
+        suggestion_api = APi.new()
+        puts "please pick an activity!"
+        input = gets.chomp
+
+    end
+end
+
 
 # class ImBored::CLI
 
