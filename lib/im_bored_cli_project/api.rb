@@ -4,33 +4,6 @@
 
 
 
-require 'httparty'
-
-class Suggestion
-    attr_accessor :type, :participants, :price
-    
-
-    @@all = []
-
-    # def initialize(type:, participants:, price:)
-    def initialize(hash)
-        hash.each do |k,v|
-            @k = v
-        end
-        @@all << self
-    end
-
-    def save
-        @@all << self
-    end
-
-    def self.all
-        @@all
-    end
-end
-
-
-
 class Api
     attr_accessor :url
     def initialize(url)
@@ -51,6 +24,8 @@ class Api
             }
             
             suggestion = Suggestion.new(suggestion_hash)
+            binding.pry
+            puts suggestion.type
     end
 
     
@@ -58,12 +33,12 @@ end
 
 
 
-api = Api.new("https://www.boredapi.com/api/")
+# api = Api.new("https://www.boredapi.com/api/")
 
-surprise = api.activity_by_total_random("activity")
+# surprise = api.activity_by_total_random("activity")
 
 # puts surprise
-puts Suggestion.all
+
 
 # http://www.boredapi.com/api/activity/ # Find an activity totally randomly
 # http://www.boredapi.com/api/activity?key=:key # Find an activity based on key

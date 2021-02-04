@@ -1,5 +1,32 @@
 # CLI Controller 
 
+# def testing
+#     puts "hello"
+#     binding.pry
+# end
+
+class Suggestion
+    attr_accessor :type, :participants, :price
+    
+
+    @@all = []
+
+    # def initialize(type:, participants:, price:)
+    def initialize(hash)
+        hash.each do |k,v|
+            @k = v
+        end
+        @@all << self
+    end
+
+    def save
+        @@all << self
+    end
+
+    def self.all
+        @@all
+    end
+end
 
 # class ImBored::CLI
 
@@ -42,6 +69,4 @@
 #     # end
 # end
 
-def testing
-    puts "hello"
-end
+
