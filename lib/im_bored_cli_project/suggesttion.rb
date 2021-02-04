@@ -1,4 +1,4 @@
-CLI Controller 
+# CLI Controller 
 
 
 # class ImBored::CLI
@@ -41,3 +41,7 @@ CLI Controller
 #     #     puts "See you next time! Have fun!"
 #     # end
 # end
+
+def testing
+    puts "hello"
+end
