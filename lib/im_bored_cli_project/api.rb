@@ -7,11 +7,11 @@
 class Api
     attr_accessor :url
     def initialize(url)
-        @url = url
+        @url = "http://www.boredapi.com/api/" #does not work for some reason. returns empty. works fine with test in im-bored.???
     end
 
 
-    def activity_by_total_random(surprise)
+    def get_a_random_event(surprise)
         # http://www.boredapi.com/api/activity/
         req_url="#{@url}#{surprise}/"
         # puts req_url # Test to make sure I still get the right URL
@@ -21,16 +21,14 @@ class Api
             type: data["type"],
             participants: data["participants"],
             price: data["price"],
-            activity: data["activity"],
-            # random: data["activity"]
+            activity: data["activity"]
+            # random: data["activity"]["accessibility"]["type"]["participants"]["price"]["link"]["key"]
             }
             
         suggestion = Suggestion.new(suggestion_hash)
-        binding.pry
-            puts suggestion.type
+        # binding.pry
+            puts suggestion.activity
     end
-
-    
 end
 
 

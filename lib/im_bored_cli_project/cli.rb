@@ -1,11 +1,21 @@
-#cexecutes it all
-# CLI Controller 
+#TODO get random activity event by type
+#TODO get random activity event
+#TODO get random activity event based off of number of participants
+#TODO get random activity event based on price
+#TODO get random activity event based on accessibility
+#TODO get random activity event based on key
+
+
+
+
+
+
 
 class Cli
 
     def run
         suggestion_api = APi.new()
-        puts "please pick an activity!"
+        puts "Ready to have some fun?"
         input = gets.chomp
 
     end
@@ -52,3 +62,7 @@ end
 #     #     puts "See you next time! Have fun!"
 #     # end
 # end
+
+
+#cexecutes it all
+# CLI Controller 

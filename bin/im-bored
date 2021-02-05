@@ -7,17 +7,19 @@ require "im_bored_cli_project_cli"
 # Tests
 # api = Api.new("https://www.boredapi.com/api/")
 
-# api.activity_by_total_random("activity")
+# api.get_a_random_event("activity")
 
 
-# require './lib/im_bored'
-# require 'suggestion'
-# require 'open-uri'
-# require 'json'
-# require "pry"
+
 
 cli = Cli.new
 cli.run
 
 
 # ImBored::CLI.new.call
+
+# require './lib/im_bored'
+# require 'suggestion'
+# require 'open-uri'
+# require 'json'
+# require "pry"
