@@ -13,8 +13,8 @@ require "im_bored_cli_project_cli"
 
 
 
-# cli = Cli.new
-# cli.run
+cli = Cli.new
+cli.run
 
 
 # ImBored::CLI.new.call

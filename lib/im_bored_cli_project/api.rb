@@ -32,7 +32,7 @@ class Api
     # end
 
     def event_by_type(type)
-        http://www.boredapi.com/api/activity/
+        # http://www.boredapi.com/api/activity/
         req_url="#{@url}activity?type=#{type}"
         puts req_url # Test to make sure I still get the right URL
         data = HTTParty.get(req_url) 
@@ -47,13 +47,13 @@ class Api
         puts data
     end
 
-    def event_by_price(price)
-        # http://www.boredapi.com/api/activity/
-        req_url="#{@url}activity?price=#{price}"
-        # puts req_url # Test to make sure I still get the right URL
-        data = HTTParty.get(req_url)
-        puts data 
-    end
+    # def event_by_price(price)
+    #     # http://www.boredapi.com/api/activity/
+    #     req_url="#{@url}activity?price=#{price}"
+    #     # puts req_url # Test to make sure I still get the right URL
+    #     data = HTTParty.get(req_url)
+    #     puts data 
+    # end
 
     # def event_by_key(key) #May not be using!!!
     #     # http://www.boredapi.com/api/activity/
