@@ -8,39 +8,39 @@ class Cli
         input = nil
         while input != "exit"
             puts "How would you like to generate your event?"
-            puts "You can generate by type, number of participants, price, or totally random!"
+            puts "You can generate by type, number of participants, or random!"
             puts "Types include education, recreational, social, diy, charity, cooking, relaxation, music, or busywork."
             puts "Participants can range from 0-any number you like."
-            puts "Price ranges from 0.0-1.0 with 0.0 being free."
+            # puts "Price ranges from 0.0-1.0 with 0.0 being free."
             puts "To generate a totally random event, type 'random'"
             puts "To quit, type 'exit'."
             puts "How would you like to generate your event?"
-            input = gets.strip.downcase
+                input = gets.strip.downcase
 
-            case input
+                case input
 
-            when "type"
+                when "type"
                 puts "Please select education, recreational, social, diy, charity, cooking, relaxation, music, or busywork."
                 input = gets.strip.downcase
                 api.event_by_type(input)
                 puts "How does that sound?"
-            when "participants"
+             when "participants"
                 puts "Please enter your number of participants."
                 input = gets.strip.downcase
                 api.event_by_participants(input)
-            when "price"
-                puts "Please enter your price range."
-                input = gets.strip.downcase
-                api.event_by_participants(input)
-            when "random"
-                puts "Let's roll those dice! Type 'activity'"
-                api.event_by_random(input)
-            when "exit"
+            #  when "price"
+            #     puts "Please enter your price range."
+            #     input = gets.strip.downcase
+            #     api.event_by_participants(input)
+             when "random"
+                puts "Let's roll those dice!"
+                api.event_by_random("activity")
+                when "exit"
                 puts "Take care!"
                 exit
-        end     
+            end     
+        end
     end
-end
 end
 
 
