@@ -17,10 +17,3 @@ cli = Cli.new
 cli.run
 
 
-# ImBored::CLI.new.call
-
-# require './lib/im_bored'
-# require 'suggestion'
-# require 'open-uri'
-# require 'json'
-# require "pry"

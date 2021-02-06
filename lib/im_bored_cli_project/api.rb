@@ -21,16 +21,6 @@ class Api
              puts data
     end
 
-
-
-    # def event_by_accessibility(accessibility)
-    #     # http://www.boredapi.com/api/activity/
-    #     req_url="#{@url}activity?accessibility=#{accessibility}"
-    #     # puts req_url # Test to make sure I still get the right URL
-    #     data = HTTParty.get(req_url)
-    #     puts data
-    # end
-
     def event_by_type(type)
         # http://www.boredapi.com/api/activity/
         req_url="#{@url}activity?type=#{type}"
@@ -47,32 +37,7 @@ class Api
         puts data
     end
 
-    # def event_by_price(price)
-    #     # http://www.boredapi.com/api/activity/
-    #     req_url="#{@url}activity?price=#{price}"
-    #     # puts req_url # Test to make sure I still get the right URL
-    #     data = HTTParty.get(req_url)
-    #     puts data 
-    # end
-
-    # def event_by_key(key) #May not be using!!!
-    #     # http://www.boredapi.com/api/activity/
-    #     req_url="#{@url}activity?key=#{key}"
-    #     # puts req_url # Test to make sure I still get the right URL
-    #     data = HTTParty.get(req_url)
-    #     puts data
-    # end
-
 end
-
-
-
-# api.event_by_type("recreational")
-# api.event_by_type("education")
-
-
-
-# api = Api.new("https://www.boredapi.com/api/")
 
 
 # http://www.boredapi.com/api/activity/ # Find an event totally randomly
