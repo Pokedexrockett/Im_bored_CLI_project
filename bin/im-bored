@@ -5,9 +5,10 @@ require "im_bored_cli_project_cli"
 
 
 # Tests
-api = Api.new("https://www.boredapi.com/")
+api = Api.new("http://www.boredapi.com/api/")
 
-api.event_by_random("activity")
+api.event_by_type("recreational")
+api.event_by_type("education")
 
 
 
