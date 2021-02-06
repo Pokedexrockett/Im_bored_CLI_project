@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/im_bored_cli_project`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+I'm bored is a ruby GEM that allows you to create random events based on type, participants, or completely random. 
 
 ## Installation
 
@@ -22,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+api.event_by_type("recreational") # returns a recreational event 
+api.event_by_random("activity") # returns a random event 
+api.event_by_participants(4) # returns an event based on the number of people
 
 ## Development
 
