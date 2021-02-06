@@ -33,6 +33,8 @@ participants - The number of people that this activity could involve [0, 5]
 
 price - A factor describing the cost of the event with zero being free [0, 1]
 
+link - helpful link for activity 
+
 key - A unique numeric id [1000000, 9999999]
 
 api.event_by_type("recreational") # returns a recreational event 
