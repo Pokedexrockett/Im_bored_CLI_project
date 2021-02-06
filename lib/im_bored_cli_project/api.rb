@@ -1,13 +1,13 @@
 # This is to test your API to make sure it works. use 'ruby lib/im_bored/api.rb' to test
-# resp = HTTParty.get("http://www.boredapi.com/api/activity/")
+# resp = HTTParty.get("http://www.boredapi.com/api/")
 # puts resp
 
 
 
 class Api
     attr_accessor :url
-    def initialize(url)
-        @url = url #"http://www.boredapi.com/api/" #does not work for some reason. returns empty. works fine with test in im-bored.???
+    def initialize()
+        @url = "http://www.boredapi.com/api/" #does not work for some reason. returns empty. works fine with test in im-bored.???
     end
 
 
@@ -23,45 +23,52 @@ class Api
 
 
 
-    # def event_by_accessibility(accessibility)
-    #     # http://www.boredapi.com/api/activity/
-    #     req_url="#{@url}activity?accessibility=#{accessibility}"
-    #     # puts req_url # Test to make sure I still get the right URL
-    #     data = HTTParty.get(req_url) 
-    # end
+    def event_by_accessibility(accessibility)
+        # http://www.boredapi.com/api/activity/
+        req_url="#{@url}activity?accessibility=#{accessibility}"
+        # puts req_url # Test to make sure I still get the right URL
+        data = HTTParty.get(req_url)
+        puts data
+    end
 
     def event_by_type(type)
-        # http://www.boredapi.com/api/activity/
+        http://www.boredapi.com/api/activity/
         req_url="#{@url}activity?type=#{type}"
+        puts req_url # Test to make sure I still get the right URL
+        data = HTTParty.get(req_url) 
+        puts data
+    end
+
+    def event_by_participants(participants)
+        # http://www.boredapi.com/api/activity/
+        req_url="#{@url}activity?participants=#{participants}"
         # puts req_url # Test to make sure I still get the right URL
         data = HTTParty.get(req_url) 
         puts data
     end
 
-    # def event_by_participants(participants)
-    #     # http://www.boredapi.com/api/activity/
-    #     req_url="#{@url}activity?participants=#{participants}"
-    #     # puts req_url # Test to make sure I still get the right URL
-    #     data = HTTParty.get(req_url) 
-    # end
+    def event_by_price(price)
+        # http://www.boredapi.com/api/activity/
+        req_url="#{@url}activity?price=#{price}"
+        # puts req_url # Test to make sure I still get the right URL
+        data = HTTParty.get(req_url)
+        puts data 
+    end
 
-    # def event_by_price(price)
-    #     # http://www.boredapi.com/api/activity/
-    #     req_url="#{@url}activity?price=#{price}"
-    #     # puts req_url # Test to make sure I still get the right URL
-    #     data = HTTParty.get(req_url) 
-    # end
-
-    # def event_by_key(key) #May not be using!!!
-    #     # http://www.boredapi.com/api/activity/
-    #     req_url="#{@url}activity?key=#{key}"
-    #     # puts req_url # Test to make sure I still get the right URL
-    #     data = HTTParty.get(req_url) 
-    # end
+    def event_by_key(key) #May not be using!!!
+        # http://www.boredapi.com/api/activity/
+        req_url="#{@url}activity?key=#{key}"
+        # puts req_url # Test to make sure I still get the right URL
+        data = HTTParty.get(req_url)
+        puts data
+    end
 
 end
 
 
+
+# api.event_by_type("recreational")
+# api.event_by_type("education")
 
 
 

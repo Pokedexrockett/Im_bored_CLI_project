@@ -11,7 +11,7 @@ require "httparty"
 require "im_bored_cli_project/version"
 require_relative "./im_bored_cli_project/suggestion"
 require_relative "./im_bored_cli_project/api"
-
+require_relative "./im_bored_cli_project/cli"
 
 # require "im_bored_cli_project/suggestion"
 # require "im_bored_cli_project/cli"

@@ -14,9 +14,12 @@
 class Cli
 
     def run
+        puts "Welcome to the I'm Bored app!"
         suggestion_api = APi.new()
         puts "Ready to have some fun?"
-        input = gets.chomp
+        input = nil
+        while input != "exit"
+            puts "How would you like to generate your event?"
 
     end
 end
