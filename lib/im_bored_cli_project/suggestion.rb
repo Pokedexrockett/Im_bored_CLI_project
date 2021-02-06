@@ -8,25 +8,26 @@
 class Suggestion
     attr_accessor :type, :participants, :price, :accessibility, :key
     
+ end
 
-    @@all = []
+
+   # @@all = []
 
     # def initialize(type:, participants:, price:)
-    def initialize(hash)
-        hash.each do |k,v|
-            self.send("#{k}=", v)
-        end
-        @@all << self
-    end
+    # def initialize(type)
+        # hash.each do |k,v|
+        #     self.send("#{k}=", v)
+        # end
+        # @@all << self
+    # end
 
-    def save
-        @@all << self
-    end
+#     def save
+#         @@all << self
+#     end
 
-    def self.all
-        @@all
-    end
-end
+#     def self.all
+#         @@all
+#     end
 
 # class ImBored::CLI
 
