@@ -6,7 +6,7 @@
 # end
 
 class Suggestion
-    attr_accessor :type, :participants, :price, :accessibility, :key
+    attr_accessor :type, :participants, :price #, :accessibility #, :key
     
  end
 

@@ -23,13 +23,13 @@ class Api
 
 
 
-    def event_by_accessibility(accessibility)
-        # http://www.boredapi.com/api/activity/
-        req_url="#{@url}activity?accessibility=#{accessibility}"
-        # puts req_url # Test to make sure I still get the right URL
-        data = HTTParty.get(req_url)
-        puts data
-    end
+    # def event_by_accessibility(accessibility)
+    #     # http://www.boredapi.com/api/activity/
+    #     req_url="#{@url}activity?accessibility=#{accessibility}"
+    #     # puts req_url # Test to make sure I still get the right URL
+    #     data = HTTParty.get(req_url)
+    #     puts data
+    # end
 
     def event_by_type(type)
         http://www.boredapi.com/api/activity/
@@ -55,13 +55,13 @@ class Api
         puts data 
     end
 
-    def event_by_key(key) #May not be using!!!
-        # http://www.boredapi.com/api/activity/
-        req_url="#{@url}activity?key=#{key}"
-        # puts req_url # Test to make sure I still get the right URL
-        data = HTTParty.get(req_url)
-        puts data
-    end
+    # def event_by_key(key) #May not be using!!!
+    #     # http://www.boredapi.com/api/activity/
+    #     req_url="#{@url}activity?key=#{key}"
+    #     # puts req_url # Test to make sure I still get the right URL
+    #     data = HTTParty.get(req_url)
+    #     puts data
+    # end
 
 end
 
