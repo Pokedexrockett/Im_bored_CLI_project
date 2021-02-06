@@ -5,15 +5,15 @@ require "im_bored_cli_project_cli"
 
 
 # Tests
-# api = Api.new("https://www.boredapi.com/api/")
+api = Api.new("https://www.boredapi.com/")
 
-# api.get_a_random_event("activity")
-
-
+api.event_by_random("activity")
 
 
-cli = Cli.new
-cli.run
+
+
+# cli = Cli.new
+# cli.run
 
 
 # ImBored::CLI.new.call

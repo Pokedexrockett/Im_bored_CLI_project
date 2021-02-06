@@ -6,7 +6,7 @@
 # end
 
 class Suggestion
-    attr_accessor :type, :participants, :price, :activity
+    attr_accessor :type, :participants, :price, :accessibility, :key
     
 
     @@all = []

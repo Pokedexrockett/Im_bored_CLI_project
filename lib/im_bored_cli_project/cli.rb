@@ -1,9 +1,9 @@
-#TODO get random activity event by type
-#TODO get random activity event
-#TODO get random activity event based off of number of participants
-#TODO get random activity event based on price
-#TODO get random activity event based on accessibility
-#TODO get random activity event based on key
+#TODO get random event by type
+#TODO get random event - g2g
+#TODO get random event based off of number of participants
+#TODO get random event based on price
+#TODO get random event based on accessibility
+#TODO get random event based on key
 
 
 
@@ -11,15 +11,15 @@
 
 
 
-class Cli
+# class Cli
 
-    def run
-        suggestion_api = APi.new()
-        puts "Ready to have some fun?"
-        input = gets.chomp
+#     def run
+#         suggestion_api = APi.new()
+#         puts "Ready to have some fun?"
+#         input = gets.chomp
 
-    end
-end
+#     end
+# end
 
 
 # class ImBored::CLI
