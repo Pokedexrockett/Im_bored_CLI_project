@@ -22,6 +22,21 @@ Or install it yourself as:
 
 ## Usage
 
+# http://www.boredapi.com/api/activity/ # Find an event totally randomly
+# http://www.boredapi.com/api/activity?key=:key # Find an event based on key
+# A unique numeric id [1000000, 9999999]
+# http://www.boredapi.com/api/activity?type=:type # Find a random event with a given type
+# Type of the activity ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]
+# http://www.boredapi.com/api/activity?participants=:participants # Find a random event with a given number of participants
+# The number of people that this activity could involve [0, n]
+# http://www.boredapi.com/api/activity?price=:price # Find an event with a specified price
+# A factor describing the cost of the event with zero being free [0, 1]
+# http://www.boredapi.com/api/activity?accessibility=:accessibility # Find an event with a specified price in an inclusively constrained range
+# A factor describing how possible an event is to do with zero being the most accessible [0.0, 1.0]
+# http://www.boredapi.com/api/activity?accessibility=1 # Find a price in an inclusively constrained range
+# http://www.boredapi.com/api/activity?minaccessibility=:minaccessibility&maxaccessibility=:maxaccessibility # Find an event with a specified accessibility in an inclusively constrained range
+
+
 activity - Description of the queried activity
 
 
