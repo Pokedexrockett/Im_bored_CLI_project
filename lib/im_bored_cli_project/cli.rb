@@ -13,13 +13,14 @@ class Cli
             puts "To generate a totally random event, type 'random'"
             puts "To see all events made so far, type 'events'."
             puts "To quit, type 'exit'."
-            # puts "How would you like to generate your event?"
+
                 input = gets.strip.downcase
 
                 if input == "type"
                 puts
                 puts "Please select education, recreational, social, diy, charity, cooking, relaxation, music, or busywork."
                 input = gets.strip.downcase
+                puts
                 api.event_by_type(input)
                 puts
                 end
@@ -29,6 +30,7 @@ class Cli
                 puts
                 puts "Please enter your number of participants."
                 input = gets.strip.downcase
+                puts
                 api.event_by_participants(input)
                 puts
                 end
@@ -36,6 +38,7 @@ class Cli
                 if input == "random"
                 puts
                 puts "Let's roll those dice!"
+                puts
                 api.event_by_random("activity")
                 puts
                 end
@@ -43,8 +46,9 @@ class Cli
                 if input == "events"
                 puts
                 puts "Here are your created events"
-                # binding.pry
-                Suggestion.all.map
+                puts
+                binding.pry
+                Suggestion.all.map {|event| [event.activity, event.type, event.participants, event.price, event.link, event.key, event.accessibility]} 
                 puts
                 end
                 
@@ -64,7 +68,6 @@ class Cli
     end
     
 end
-
 
 
 

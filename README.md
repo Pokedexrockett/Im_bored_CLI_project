@@ -37,6 +37,12 @@ Or install it yourself as:
 # http://www.boredapi.com/api/activity?minaccessibility=:minaccessibility&maxaccessibility=:maxaccessibility # Find an event with a specified accessibility in an inclusively constrained range
 
 
+# This is to test your API to make sure it works. use 'ruby lib/im_bored/api.rb' to test
+# resp = HTTParty.get("http://www.boredapi.com/api/")
+# puts resp
+# 'puts req_url' # Test to make sure I still get the right URL
+
+
 activity - Description of the queried activity
 
 

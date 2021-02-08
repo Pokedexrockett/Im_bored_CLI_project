@@ -6,45 +6,32 @@
 # end
 
 class Suggestion
-    # attr_accessor :type, :participants 
+     attr_accessor :type, :participants, :random
     # attr_reader :activity, :price, :link, :key, :accessibility
-    @@all = []
+     @@all = []
 
-  def initialize(type, participants)
+  def initialize(type, participants, random)
       @type = type
       @participants = participants
-      @@all << self
+      @random = random
+       
   end 
 
-  def self.all
-      @@all
-  end 
+  def save
+    @@all << self
+  end
 
-    # @@all = []
-    # @all = []
+   def self.all
+       @@all
+   end 
+end
 
-    # class << self
-    #     attr_accessor :all
-    # end
-
-    # def initialize
-    #     self.class.all << self
-    # end
-
-    # def instances
-    #     self.class.all
-    # end
+    
 
     # def initialize(hash)
     #     hash.each do |k,v|
     #         self.send(k, ":#{v}")
     #         binding.pry
-    #         @type = type
-    #     @participants = participants
-    #     @activity = []
-    #     @price = price
-    #     @key = key
-    #     @accessibility = accessibility
     #      @@all << self
     #     end
 
@@ -61,10 +48,4 @@ class Suggestion
     #     end
     # end
 
-end
-
-# def list_events
-#     # binding.pry
-#     self.all.map #{ |suggestion| suggestion.object_id } #{|event| [:activity, :type, :participants, :price, :link, :key, :accessibility]}
-# end
 
