@@ -18,7 +18,21 @@ class Api
         data = HTTParty.get(req_url) 
         # 'puts data' #Test for endpoint
         # # binding.pry
-             puts data
+            #  puts data
+            # hash = {
+            #     activity: data["activity"],
+            #     type: data["type"],
+            #     participants: data["participants"],
+            #     price: ["price"],
+            #     link: ["link"],
+            #     key: ["key"],
+            #     accessibility: ["accessibility"]
+        puts data
+            
+
+        #     event = Suggestion.new(hash)
+        #     puts event
+        # end
     end
 
     def event_by_type(type)
@@ -38,6 +52,7 @@ class Api
     end
 
 end
+
 
 
 # http://www.boredapi.com/api/activity/ # Find an event totally randomly
