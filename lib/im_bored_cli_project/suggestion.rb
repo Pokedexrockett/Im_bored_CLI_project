@@ -1,51 +1,37 @@
-# CLI Controller 
-
-# def testing
-#     puts "hello"
-#     binding.pry
-# end
-
 class Suggestion
-     attr_accessor :type, :participants, :random
-    # attr_reader :activity, :price, :link, :key, :accessibility
+
      @@all = []
 
-  def initialize(type, participants, random)
-      @type = type
-      @participants = participants
-      @random = random
-       
-  end 
+    def initialize()
+    end 
 
-  def save
-    @@all << self
-  end
+    def random_hash_method(my_hash = {} )
+        my_hash.each do |k, v|
+            puts "#{k}: #{v}"
+        end
+         @@all << self
+    end # random_hash_method
 
-   def self.all
-       @@all
-   end 
-end
+    def get_type(my_type_hash = {})
+        my_type_hash.each do |k, v|
+            puts "#{k}: #{v}"
+        end # type_hash-end of the do iterator
+
+    end
+
+
+    def get_participants(my_participants_hash = {})
+        my_participants_hash.each do |k, v|    
+            puts "#{k}: #{v}"
+        end # participants_hash_method the do iterator
+    end
 
     
+    def save
+        @@all << self
+    end
 
-    # def initialize(hash)
-    #     hash.each do |k,v|
-    #         self.send(k, ":#{v}")
-    #         binding.pry
-    #      @@all << self
-    #     end
-
-    #     def save
-    #     @@all << self
-    #     end
-
-    #     def self.all
-    #     @@all
-    #     end
-
-    #     def events
-    #     @@all.map
-    #     end
-    # end
-
-
+    def self.all
+        @@all
+    end 
+end

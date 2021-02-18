@@ -1,5 +1,5 @@
 
-class Cli
+class Cli 
 
     def run
         puts "Welcome to the I'm Bored app!"
@@ -21,7 +21,8 @@ class Cli
                 puts "Please select education, recreational, social, diy, charity, cooking, relaxation, music, or busywork."
                 input = gets.strip.downcase
                 puts
-                api.event_by_type(input)
+                x = api.event_by_type(input)
+                
                 puts
                 end
             
@@ -39,7 +40,7 @@ class Cli
                 puts
                 puts "Let's roll those dice!"
                 puts
-                api.event_by_random("activity")
+                api.event_by_random()
                 puts
                 end
 
@@ -47,7 +48,7 @@ class Cli
                 puts
                 puts "Here are your created events"
                 puts
-                binding.pry
+                #binding.pry
                 Suggestion.all.map {|event| [event.activity, event.type, event.participants, event.price, event.link, event.key, event.accessibility]} 
                 puts
                 end

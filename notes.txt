@@ -1,0 +1,3 @@
+#     #  attr_accessor :type, :participants#, :random
+     #attr_reader :activity, :price, :link, :key, :accessibility
+     #start with #suggestion class
