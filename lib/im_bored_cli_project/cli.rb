@@ -49,8 +49,8 @@ class Cli
                 puts "Here are your created events"
                 puts
                 #binding.pry
-                Suggestion.all.map {|event| [event.activity, event.type, event.participants, event.price, event.link, event.key, event.accessibility]} 
-                puts
+                #Suggestion.all.map {|event| [event.activity, event.type, event.participants, event.price, event.link, event.key, event.accessibility]} 
+                #puts
                 end
                 
               if input == "exit"
