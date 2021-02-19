@@ -49,22 +49,19 @@ class Cli
                 puts "Here are your created events"
                 puts
                 #binding.pry
-                #Suggestion.all.map {|event| [event.activity, event.type, event.participants, event.price, event.link, event.key, event.accessibility]} 
-                #puts
+                 Suggestion.all.each do |event| 
+                    event.print_attributes
+                    
+                    end
                 end
                 
-              if input == "exit"
+                if input == "exit"
                 puts
                 puts "Take care!"
                 puts
                 exit
-            end     
+                end     
 
-            # if input != "types" && != "participants" && != "random" && != "events" && != "exit"
-            #     input = gets.strip.downcase
-            #     puts "I think you mispelled something. Try again."
-            #     puts
-            # end
         end
     end
     

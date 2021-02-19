@@ -1,15 +1,20 @@
 class Suggestion
 
+    attr_accessor :activity, :type, :participants, :price, :link, :key, :accessibility
+
      @@all = []
 
-    def initialize()
+    def initialize(hash)
+        hash.each do |key, value|
+            self.instance_variable_set("@#{key}", value)
+        end
+        save
     end 
 
-    def random_hash_method(my_hash = {} )
+    def random_hash_method(my_hash = {})
         my_hash.each do |k, v|
             puts "#{k}: #{v}"
         end
-         @@all << self
     end # random_hash_method
 
     def get_type(my_type_hash = {})
@@ -26,12 +31,23 @@ class Suggestion
         end # participants_hash_method the do iterator
     end
 
-    
-    # def save
-    #     @@all << self
-    # end
+    def print_attributes
+        puts "activity: #{activity}"
+        puts "type: #{type}"
+        puts "participants: #{participants}"
+        puts "price: #{price}"
+        puts "link: #{link}"
+        puts "key: #{key}"
+        puts "accessibility: #{accessibility}\n"
+        puts
+    end
 
-    # def self.all
-    #     @@all
-    # end 
+    
+    def save
+        @@all << self
+    end
+
+    def self.all 
+        @@all
+    end 
 end
